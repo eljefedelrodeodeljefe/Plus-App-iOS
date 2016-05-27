@@ -66,7 +66,7 @@
 		C539E6531A315E87003B7CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C539E6591A315E87003B7CC7 /* plus-app.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "plus-app.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539E65E1A315E87003B7CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C539E65F1A315E87003B7CC7 /* plus-appTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plus-appTest.swift; sourceTree = "<group>"; };
+		C539E65F1A315E87003B7CC7 /* plus-appTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "plus-appTest.swift"; sourceTree = "<group>"; };
 		C539E66B1A316C78003B7CC7 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		C539E66D1A316F5F003B7CC7 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 		C5498C7D1BE897250076A7C5 /* ImageHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeaderView.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C5BA8AA41A43E24C00863FB9 /* Source */,
-				C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */,
+				C539E6431A315E87003B7CC7 /* plus-app */,
 				C539E65C1A315E87003B7CC7 /* plus-appTest */,
 				C539E6421A315E87003B7CC7 /* Products */,
 			);
@@ -145,7 +145,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C539E6431A315E87003B7CC7 /* SlideMenuControllerSwift */ = {
+		C539E6431A315E87003B7CC7 /* plus-app */ = {
 			isa = PBXGroup;
 			children = (
 				C539E6461A315E87003B7CC7 /* AppDelegate.swift */,
@@ -157,7 +157,7 @@
 				C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */,
 				C539E6441A315E87003B7CC7 /* Supporting Files */,
 			);
-			path = plus-app;
+			path = "plus-app";
 			sourceTree = "<group>";
 		};
 		C539E6441A315E87003B7CC7 /* Supporting Files */ = {
@@ -174,7 +174,7 @@
 				C539E65F1A315E87003B7CC7 /* plus-appTest.swift */,
 				C539E65D1A315E87003B7CC7 /* Supporting Files */,
 			);
-			path = plus-appTest;
+			path = "plus-appTest";
 			sourceTree = "<group>";
 		};
 		C539E65D1A315E87003B7CC7 /* Supporting Files */ = {
@@ -293,7 +293,7 @@
 			dependencies = (
 			);
 			name = "plus-app";
-			productName = plus-app;
+			productName = "plus-app";
 			productReference = C539E6411A315E87003B7CC7 /* plus-app.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -311,7 +311,7 @@
 				C539E65B1A315E87003B7CC7 /* PBXTargetDependency */,
 			);
 			name = "plus-appTests";
-			productName = plus-appTest;
+			productName = "plus-appTest";
 			productReference = C539E6591A315E87003B7CC7 /* plus-app.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -331,6 +331,7 @@
 					};
 					C539E6401A315E87003B7CC7 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = YT6TPMHAL2;
 					};
 					C539E6581A315E87003B7CC7 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -596,10 +597,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = plus-app/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "plus-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "plus.plus-app";
 				PRODUCT_NAME = "plus-app";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -609,10 +611,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = plus-app/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "plus-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "plus.plus-app";
 				PRODUCT_NAME = "plus-app";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -630,7 +633,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = plus-appTest/Info.plist;
+				INFOPLIST_FILE = "plus-appTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "plus-app";
@@ -646,7 +649,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = plus-appTest/Info.plist;
+				INFOPLIST_FILE = "plus-appTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dekatotoro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "plus-app";
