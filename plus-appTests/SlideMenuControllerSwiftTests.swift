@@ -1,12 +1,12 @@
 //
-//  SlideMenuControllerSwiftTests.swift
-//  SlideMenuControllerSwiftTests
+//  plus-appTest.swift
+//  plus-appTest
 //
 
 import UIKit
 import XCTest
 
-class SlideMenuControllerSwiftTests: XCTestCase {
+class plus-appTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
