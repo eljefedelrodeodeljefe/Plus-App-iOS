@@ -332,6 +332,11 @@
 					C539E6401A315E87003B7CC7 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = YT6TPMHAL2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C539E6581A315E87003B7CC7 = {
 						CreatedOnToolsVersion = 6.1.1;
