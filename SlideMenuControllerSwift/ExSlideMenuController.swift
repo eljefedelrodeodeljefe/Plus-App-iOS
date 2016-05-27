@@ -2,9 +2,6 @@
 //  ExSlideMenuController.swift
 //  SlideMenuControllerSwift
 //
-//  Created by Yuji Hato on 11/11/15.
-//  Copyright © 2015 Yuji Hato. All rights reserved.
-//
 
 import UIKit
 
@@ -21,7 +18,7 @@ class ExSlideMenuController : SlideMenuController {
         }
         return false
     }
-    
+
     override func track(trackAction: TrackAction) {
         switch trackAction {
         case .LeftTapOpen:
@@ -40,6 +37,6 @@ class ExSlideMenuController : SlideMenuController {
             print("TrackAction: right flick open.")
         case .RightFlickClose:
             print("TrackAction: right flick close.")
-        }   
+        }
     }
 }

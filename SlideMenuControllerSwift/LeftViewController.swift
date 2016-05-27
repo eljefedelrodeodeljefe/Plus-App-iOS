@@ -2,8 +2,6 @@
 //  LeftViewController.swift
 //  SlideMenuControllerSwift
 //
-//  Created by Yuji Hato on 12/3/14.
-//
 
 import UIKit
 
@@ -20,7 +18,7 @@ protocol LeftMenuProtocol : class {
 }
 
 class LeftViewController : UIViewController, LeftMenuProtocol {
-    
+
     @IBOutlet weak var tableView: UITableView!
     var menus = ["Main", "Swift", "Java", "Go", "NonMenu"]
     var mainViewController: UIViewController!
@@ -29,45 +27,45 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var goViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
-        
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let swiftViewController = storyboard.instantiateViewControllerWithIdentifier("SwiftViewController") as! SwiftViewController
         self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
-        
+
         let javaViewController = storyboard.instantiateViewControllerWithIdentifier("JavaViewController") as! JavaViewController
         self.javaViewController = UINavigationController(rootViewController: javaViewController)
-        
+
         let goViewController = storyboard.instantiateViewControllerWithIdentifier("GoViewController") as! GoViewController
         self.goViewController = UINavigationController(rootViewController: goViewController)
-        
+
         let nonMenuController = storyboard.instantiateViewControllerWithIdentifier("NonMenuController") as! NonMenuController
         nonMenuController.delegate = self
         self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
-        
+
         self.tableView.registerCellClass(BaseTableViewCell.self)
-        
+
         self.imageHeaderView = ImageHeaderView.loadNib()
         self.view.addSubview(self.imageHeaderView)
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
         self.view.layoutIfNeeded()
     }
-    
+
     func changeViewController(menu: LeftMenu) {
         switch menu {
         case .Main:
@@ -97,13 +95,13 @@ extension LeftViewController : UITableViewDelegate {
 }
 
 extension LeftViewController : UITableViewDataSource {
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menus.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
             case .Main, .Swift, .Java, .Go, .NonMenu:
@@ -114,7 +112,7 @@ extension LeftViewController : UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let menu = LeftMenu(rawValue: indexPath.item) {
             self.changeViewController(menu)
@@ -123,11 +121,11 @@ extension LeftViewController : UITableViewDataSource {
 }
 
 extension LeftViewController: UIScrollViewDelegate {
-    
-    
+
+
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if self.tableView == scrollView {
-            
+
         }
     }
 }

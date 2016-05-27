@@ -2,9 +2,6 @@
 //  UIColor.swift
 //  SlideMenuControllerSwift
 //
-//  Created by Yuji Hato on 11/5/15.
-//  Copyright © 2015 Yuji Hato. All rights reserved.
-//
 
 import UIKit
 
@@ -19,11 +16,11 @@ extension UIColor {
         if hexWithoutSymbol.hasPrefix("#") {
             hexWithoutSymbol = hex.substring(1)
         }
-        
+
         let scanner = NSScanner(string: hexWithoutSymbol)
         var hexInt:UInt32 = 0x0
         scanner.scanHexInt(&hexInt)
-        
+
         var r:UInt32!, g:UInt32!, b:UInt32!
         switch (hexWithoutSymbol.length) {
         case 3: // #RGB
@@ -40,7 +37,7 @@ extension UIColor {
             // TODO:ERROR
             break;
         }
-        
+
         self.init(
             red: (CGFloat(r)/255),
             green: (CGFloat(g)/255),
