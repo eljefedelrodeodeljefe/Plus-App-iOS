@@ -6,6 +6,7 @@ target 'plus-app' do
   use_frameworks!
   pod 'SlideMenuControllerSwift'
   pod 'EmitterKit', '~> 4.0'
+  pod 'Firebase'
   # Pods for plus-app
 
   target 'plus-appTests' do
