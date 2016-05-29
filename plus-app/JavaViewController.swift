@@ -40,11 +40,7 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        let tracker = GAI.sharedInstance().defaultTracker
-        tracker.set(kGAIScreenName, value: "webView")
-        
-        let builder = GAIDictionaryBuilder.createScreenView()
-        tracker.send(builder.build() as [NSObject : AnyObject])
+        self.setScreeName("My Screen Name")
     }
     
     override func viewDidLoad() {
