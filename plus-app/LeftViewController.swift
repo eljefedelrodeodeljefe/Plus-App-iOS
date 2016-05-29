@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import EmitterKit
 
 enum LeftMenu: Int {
     case Main = 0
@@ -65,6 +66,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
         self.view.layoutIfNeeded()
     }
+    
+    var listener: Listener!
 
     func changeViewController(menu: LeftMenu) {
         switch menu {
@@ -74,6 +77,14 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
         case .Java:
             self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
+              print("doing transition")
+            
+            // need to keep reference here
+            EventEmitter.shared.listener = EventEmitter.shared.menu.on { msg in print("\(msg)")}
+            
+            EventEmitter.shared.menu.emit("hello")
+            EventEmitter.shared.menu.emit("hello2")
+            self.slideMenuController()?.closeLeft()
         case .Go:
             self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
         case .NonMenu:

@@ -5,6 +5,8 @@
 
 import UIKit
 import WebKit
+import EmitterKit
+
 
 extension WKWebView {
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
@@ -39,6 +41,7 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         /* Create our preferences on how the web page should be loaded */
         let preferences = WKPreferences()

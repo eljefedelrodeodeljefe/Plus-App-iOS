@@ -1,0 +1,15 @@
+PODS:
+  - EmitterKit (4.0.2)
+  - SlideMenuControllerSwift (2.1.1)
+
+DEPENDENCIES:
+  - EmitterKit (~> 4.0)
+  - SlideMenuControllerSwift
+
+SPEC CHECKSUMS:
+  EmitterKit: ac0dced2291745a6dd299a150665e1b3f0844a32
+  SlideMenuControllerSwift: 82ada9b04e03538c84d034cf1c09e5849c0113f7
+
+PODFILE CHECKSUM: c2b9b318bebda5d835648bcbaf59ba9d3e581b42
+
+COCOAPODS: 1.0.0

@@ -4,6 +4,7 @@
 
 import UIKit
 import CoreData
+import EmitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,6 +12,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private func createMenuView() {
+        
+        // initialize global EventEmitter
+        EventEmitter.shared
 
         // create viewController code...
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -1,0 +1,6 @@
+framework module Pods_plus_app_iOS {
+  umbrella header "Pods-plus-app-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
