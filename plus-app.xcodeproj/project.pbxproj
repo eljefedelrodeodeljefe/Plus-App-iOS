@@ -12,7 +12,8 @@
 		0EB8EBFF1BE3CF3C00BC2A99 /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E75C5A51BE3CAFE00844634 /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EC562DB0A14799E21008CCB /* Pods_plus_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661B88F6A6ED2EDEABBB8301 /* Pods_plus_appTests.framework */; };
 		8A77DBEB8C2C8C4436CDA1BB /* Pods_plus_app_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2156023A3890AD590C1877B5 /* Pods_plus_app_iOS.framework */; };
-		9FE5240A1CFB5D9600725CA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FE524091CFB5D9600725CA9 /* GoogleService-Info.plist */; };
+		9FE5240E1CFB630900725CA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FE5240D1CFB630900725CA9 /* GoogleService-Info.plist */; };
+		9FE524111CFB6B2A00725CA9 /* GAViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE524101CFB6B2A00725CA9 /* GAViewExtension.swift */; };
 		9FE84C021CFA3AB700B8CAE0 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE84C011CFA3AB700B8CAE0 /* EventEmitter.swift */; };
 		C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539E6461A315E87003B7CC7 /* AppDelegate.swift */; };
 		C539E64A1A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C539E6481A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld */; };
@@ -66,7 +67,9 @@
 		616FABA2997C77E95D247222 /* Pods-plus-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plus-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-plus-app/Pods-plus-app.release.xcconfig"; sourceTree = "<group>"; };
 		661B88F6A6ED2EDEABBB8301 /* Pods_plus_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plus_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D784E7A1CFB6CB4073E864E /* Pods-plus-app-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plus-app-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plus-app-iOS/Pods-plus-app-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		9FE524091CFB5D9600725CA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FE5240D1CFB630900725CA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FE5240F1CFB64F300725CA9 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		9FE524101CFB6B2A00725CA9 /* GAViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAViewExtension.swift; sourceTree = "<group>"; };
 		9FE84C011CFA3AB700B8CAE0 /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventEmitter.swift; path = ../EventEmitter.swift; sourceTree = "<group>"; };
 		BD1A69D0EBF641CC0389B53E /* Pods_plus_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plus_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539E6411A315E87003B7CC7 /* plus-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "plus-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +163,7 @@
 		C539E6381A315E87003B7CC7 = {
 			isa = PBXGroup;
 			children = (
+				9FE5240F1CFB64F300725CA9 /* Header.h */,
 				C5BA8AA41A43E24C00863FB9 /* Source */,
 				C539E6431A315E87003B7CC7 /* plus-app */,
 				C539E65C1A315E87003B7CC7 /* plus-appTest */,
@@ -182,7 +186,7 @@
 		C539E6431A315E87003B7CC7 /* plus-app */ = {
 			isa = PBXGroup;
 			children = (
-				9FE524091CFB5D9600725CA9 /* GoogleService-Info.plist */,
+				9FE5240D1CFB630900725CA9 /* GoogleService-Info.plist */,
 				9FE84C011CFA3AB700B8CAE0 /* EventEmitter.swift */,
 				C539E6461A315E87003B7CC7 /* AppDelegate.swift */,
 				C5C1CE631A70F7C400B6E411 /* ViewController */,
@@ -252,6 +256,7 @@
 				C5F179CF1BEB2CB500EEDD9A /* UIView.swift */,
 				C5F179D11BEB2FAF00EEDD9A /* UIColor.swift */,
 				C5BF6A8D1BF34A8B0064C18E /* UIApplication.swift */,
+				9FE524101CFB6B2A00725CA9 /* GAViewExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -431,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5498C801BE897660076A7C5 /* ImageHeaderView.xib in Resources */,
-				9FE5240A1CFB5D9600725CA9 /* GoogleService-Info.plist in Resources */,
+				9FE5240E1CFB630900725CA9 /* GoogleService-Info.plist in Resources */,
 				C5BF6A8A1BF3335D0064C18E /* SubContentsViewController.storyboard in Resources */,
 				C5BF6A841BEEF1E70064C18E /* DataTableViewCell.xib in Resources */,
 				0E75C5A61BE3CAFE00844634 /* Info.plist in Resources */,
@@ -605,6 +610,7 @@
 				C5498C7E1BE897250076A7C5 /* ImageHeaderView.swift in Sources */,
 				C5BF6A861BEF4C080064C18E /* SubContentsViewController.swift in Sources */,
 				C5BD39DC1A6CD15700D0AF95 /* JavaViewController.swift in Sources */,
+				9FE524111CFB6B2A00725CA9 /* GAViewExtension.swift in Sources */,
 				C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */,
 				C539E66E1A316F5F003B7CC7 /* RightViewController.swift in Sources */,
 				C5C1CE5F1A70F2FD00B6E411 /* String.swift in Sources */,
@@ -790,6 +796,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "plus.plus-app";
 				PRODUCT_NAME = "plus-app";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = Header.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -805,6 +813,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "plus.plus-app";
 				PRODUCT_NAME = "plus-app";
+				SWIFT_OBJC_BRIDGING_HEADER = Header.h;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
