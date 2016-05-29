@@ -23,6 +23,7 @@ extension UIViewController {
     
     func trackEvent(category: String, action: String, label: String, value: NSNumber?) {
         let tracker = GAI.sharedInstance().defaultTracker
+        tracker.allowIDFACollection = true
         let trackDictionary = GAIDictionaryBuilder.createEventWithCategory(category, action: action, label: label, value: value)
         tracker.send(trackDictionary.build() as [NSObject : AnyObject])
     }
