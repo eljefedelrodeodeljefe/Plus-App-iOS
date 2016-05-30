@@ -40,7 +40,7 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.setScreeName("My Screen Name")
+//        self.setScreeName("My Screen Name")
     }
     
     override func viewDidLoad() {

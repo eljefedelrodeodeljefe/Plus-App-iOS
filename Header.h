@@ -9,6 +9,6 @@
 #ifndef Header_h
 #define Header_h
 
-#import <Google/Analytics.h>
+//#import <Google/Analytics.h>
 
 #endif /* Header_h */

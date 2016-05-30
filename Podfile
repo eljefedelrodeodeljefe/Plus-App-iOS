@@ -7,8 +7,9 @@ target 'plus-app' do
   pod 'SlideMenuControllerSwift'
   pod 'EmitterKit', '~> 4.0'
   pod 'Firebase'
-  pod 'Google/Analytics'
-  pod 'Google/SignIn'
+  pod 'Firebase/Messaging'
+  # pod 'Google/Analytics'
+  # pod 'Google/SignIn'
   # Pods for plus-app
 
   target 'plus-appTests' do

@@ -2,24 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>TRACKING_ID</key>
-	<string>UA-75027807-2</string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>441599118584-78tpjdu2d6met5dgfsn41an69nb9uok7.apps.googleusercontent.com</string>
+	<string>991904755665-l694gq4jc2jrf55uev8mnfcjkrp6hg72.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.441599118584-78tpjdu2d6met5dgfsn41an69nb9uok7</string>
+	<string>com.googleusercontent.apps.991904755665-l694gq4jc2jrf55uev8mnfcjkrp6hg72</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD13QXNxybryNzqmVUl1ceBVei0CeCbzEQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>441599118584</string>
+	<string>991904755665</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>plus.plus-app</string>
 	<key>PROJECT_ID</key>
-	<string>plus-d92f8</string>
+	<string>project-6602602338944349105</string>
+	<key>STORAGE_BUCKET</key>
+	<string>project-6602602338944349105.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
-	<key>IS_ANALYTICS_ENABLED</key>
 	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
 	<false/>
 	<key>IS_GCM_ENABLED</key>
@@ -27,6 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:441599118584:ios:c48e08673a95a779</string>
+	<string>1:991904755665:ios:c48e08673a95a779</string>
+	<key>DATABASE_URL</key>
+	<string>https://project-6602602338944349105.firebaseio.com</string>
 </dict>
 </plist>
