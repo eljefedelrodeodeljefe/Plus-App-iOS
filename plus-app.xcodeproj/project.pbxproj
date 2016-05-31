@@ -343,6 +343,7 @@
 				C539E63F1A315E87003B7CC7 /* Resources */,
 				FCD5666B682E007DBADF7EB1 /* 📦 Embed Pods Frameworks */,
 				F30D8085B8346B3F2E2B31CF /* 📦 Copy Pods Resources */,
+				9F3CB3261CFD0A4B00ADB344 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -545,6 +546,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-plus-app-iOS/Pods-plus-app-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9F3CB3261CFD0A4B00ADB344 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 655a358d41de0a1756d2eb779834211e64c461b6 c05ef8029b0189423fe42c44faf25333474af6c94f9bbfbbf25a117f07abf707";
 		};
 		F30D8085B8346B3F2E2B31CF /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

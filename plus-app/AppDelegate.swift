@@ -8,6 +8,8 @@ import EmitterKit
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -41,6 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        Fabric.with([Crashlytics.self])
+        self.logUser()
+
 
         // Configure tracker from GoogleService-Info.plist.
         //var configureError:NSError?
@@ -210,5 +216,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     // [END connect_to_fcm]
+    
+    func logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.sharedInstance().setUserEmail("user@fabric.io")
+        Crashlytics.sharedInstance().setUserIdentifier("12345")
+        Crashlytics.sharedInstance().setUserName("Test User")
+    }
 
 }

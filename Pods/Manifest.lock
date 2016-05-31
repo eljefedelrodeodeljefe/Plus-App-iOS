@@ -1,5 +1,8 @@
 PODS:
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
   - EmitterKit (4.0.2)
+  - Fabric (1.6.7)
   - Firebase (3.2.0):
     - Firebase/Core (= 3.2.0)
   - Firebase/Analytics (3.2.0):
@@ -31,13 +34,17 @@ PODS:
   - SlideMenuControllerSwift (2.1.1)
 
 DEPENDENCIES:
+  - Crashlytics
   - EmitterKit (~> 4.0)
+  - Fabric
   - Firebase
   - Firebase/Messaging
   - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   EmitterKit: ac0dced2291745a6dd299a150665e1b3f0844a32
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Firebase: 6d4012da1598732a2b43f16d8355eca90f94ed59
   FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
   FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
@@ -48,6 +55,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   SlideMenuControllerSwift: 82ada9b04e03538c84d034cf1c09e5849c0113f7
 
-PODFILE CHECKSUM: 8e4da9070c80d6975a8f478954308321717d7bff
+PODFILE CHECKSUM: 6338620a1a06fb2a2b2703a5c84746460c67fee3
 
 COCOAPODS: 1.0.0

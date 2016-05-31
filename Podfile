@@ -8,6 +8,8 @@ target 'plus-app' do
   pod 'EmitterKit', '~> 4.0'
   pod 'Firebase'
   pod 'Firebase/Messaging'
+  pod 'Fabric'
+  pod 'Crashlytics'
   # pod 'Google/Analytics'
   # pod 'Google/SignIn'
   # Pods for plus-app
