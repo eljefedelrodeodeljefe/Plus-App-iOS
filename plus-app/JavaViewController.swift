@@ -17,6 +17,7 @@ extension WKWebView {
 class JavaViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView?
     
+    
     /* Start the network activity indicator when the web view is loading */
     func webView(webView: WKWebView,
                  didStartProvisionalNavigation navigation: WKNavigation){
@@ -39,13 +40,16 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
         
     }
     
+    
+    
     override func viewWillAppear(animated: Bool) {
 //        self.setScreeName("My Screen Name")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // this fixes the webiew being und the navigation
+        self.edgesForExtendedLayout = .None
         
         /* Create our preferences on how the web page should be loaded */
         let preferences = WKPreferences()
@@ -56,7 +60,8 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
         configuration.preferences = preferences
         
         /* Now instantiate the web view */
-        webView = WKWebView(frame: view.bounds, configuration: configuration)
+        webView = WKWebView(frame: view.frame, configuration: configuration)
+
         
         if let theWebView = webView{
             /* Load a web page into our web view */
@@ -68,6 +73,7 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
             theWebView.loadRequest(urlRequest)
             theWebView.navigationDelegate = self
             view.addSubview(theWebView)
+            
             
         }
         
