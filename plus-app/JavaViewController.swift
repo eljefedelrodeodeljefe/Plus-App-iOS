@@ -60,8 +60,10 @@ class JavaViewController: UIViewController, WKNavigationDelegate {
         
         if let theWebView = webView{
             /* Load a web page into our web view */
-            let url = NSURL(string: "http://www.apple.com")
+            let url = NSBundle.mainBundle().URLForResource("bundle", withExtension: "html")
             let urlRequest = NSURLRequest(URL: url!)
+
+            
             theWebView.scrollView.bounces = false
             theWebView.loadRequest(urlRequest)
             theWebView.navigationDelegate = self
