@@ -32,7 +32,7 @@
 		C5498C821BE8994F0076A7C5 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5498C811BE8994F0076A7C5 /* UIImageView.swift */; };
 		C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA8AA51A43E2EF00863FB9 /* SlideMenuController.swift */; };
 		C5BD39DA1A6CD12300D0AF95 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39D91A6CD12300D0AF95 /* SwiftViewController.swift */; };
-		C5BD39DC1A6CD15700D0AF95 /* JavaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DB1A6CD15700D0AF95 /* JavaViewController.swift */; };
+		C5BD39DC1A6CD15700D0AF95 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DB1A6CD15700D0AF95 /* ArtistsViewController.swift */; };
 		C5BD39DE1A6CD17B00D0AF95 /* GoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DD1A6CD17B00D0AF95 /* GoViewController.swift */; };
 		C5BD39E01A6CDC8100D0AF95 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BD39DF1A6CDC8100D0AF95 /* UIViewController.swift */; };
 		C5BF6A821BEEF1A70064C18E /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF6A811BEEF1A70064C18E /* DataTableViewCell.swift */; };
@@ -96,7 +96,7 @@
 		C5498C811BE8994F0076A7C5 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		C5BA8AA51A43E2EF00863FB9 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
 		C5BD39D91A6CD12300D0AF95 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
-		C5BD39DB1A6CD15700D0AF95 /* JavaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaViewController.swift; sourceTree = "<group>"; };
+		C5BD39DB1A6CD15700D0AF95 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
 		C5BD39DD1A6CD17B00D0AF95 /* GoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoViewController.swift; sourceTree = "<group>"; };
 		C5BD39DF1A6CDC8100D0AF95 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C5BF6A811BEEF1A70064C18E /* DataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 				C539E66B1A316C78003B7CC7 /* LeftViewController.swift */,
 				C539E66D1A316F5F003B7CC7 /* RightViewController.swift */,
 				C5BD39D91A6CD12300D0AF95 /* SwiftViewController.swift */,
-				C5BD39DB1A6CD15700D0AF95 /* JavaViewController.swift */,
+				C5BD39DB1A6CD15700D0AF95 /* ArtistsViewController.swift */,
 				C5BD39DD1A6CD17B00D0AF95 /* GoViewController.swift */,
 				C5C1CE5A1A70DADF00B6E411 /* NonMenuController.swift */,
 				C539E64D1A315E87003B7CC7 /* Main.storyboard */,
@@ -643,7 +643,7 @@
 				C5C1CE5B1A70DADF00B6E411 /* NonMenuController.swift in Sources */,
 				C5498C7E1BE897250076A7C5 /* ImageHeaderView.swift in Sources */,
 				C5BF6A861BEF4C080064C18E /* SubContentsViewController.swift in Sources */,
-				C5BD39DC1A6CD15700D0AF95 /* JavaViewController.swift in Sources */,
+				C5BD39DC1A6CD15700D0AF95 /* ArtistsViewController.swift in Sources */,
 				9FE524111CFB6B2A00725CA9 /* GAViewExtension.swift in Sources */,
 				C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */,
 				C539E66E1A316F5F003B7CC7 /* RightViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  JavaViewController.swift
+//  ArtistsViewController.swift
 //  SlideMenuControllerSwift
 //
 
@@ -14,7 +14,7 @@ extension WKWebView {
     }
 }
 
-class JavaViewController: UIViewController, WKNavigationDelegate {
+class ArtistsViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView?
     
     

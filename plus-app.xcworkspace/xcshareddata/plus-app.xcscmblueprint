@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "218050B2A1674A7F832C6470000AD1A7F373ABDB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "218050B2A1674A7F832C6470000AD1A7F373ABDB" : 0,
+    "1F3D7D5B292E9CC843C9692A08D67F0C6361A06C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6F832009-D5F8-4B7D-8CF8-E6C8BD50463F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "218050B2A1674A7F832C6470000AD1A7F373ABDB" : "ios\/",
+    "1F3D7D5B292E9CC843C9692A08D67F0C6361A06C" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "plus-app",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "plus-app.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eljefedelrodeodeljefe\/Plus-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1F3D7D5B292E9CC843C9692A08D67F0C6361A06C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eljefedelrodeodeljefe\/Plus-App-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "218050B2A1674A7F832C6470000AD1A7F373ABDB"
+    }
+  ]
+}

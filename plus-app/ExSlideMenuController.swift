@@ -11,7 +11,7 @@ class ExSlideMenuController : SlideMenuController {
         if let vc = UIApplication.topViewController() {
             if vc is MainViewController ||
             vc is SwiftViewController ||
-            vc is JavaViewController ||
+            vc is ArtistsViewController ||
             vc is GoViewController {
                 return true
             }

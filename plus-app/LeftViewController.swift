@@ -8,8 +8,8 @@ import EmitterKit
 
 enum LeftMenu: Int {
     case Main = 0
+    case Artists
     case Swift
-    case Java
     case Go
     case NonMenu
 }
@@ -21,10 +21,11 @@ protocol LeftMenuProtocol : class {
 class LeftViewController : UIViewController, LeftMenuProtocol {
 
     @IBOutlet weak var tableView: UITableView!
-    var menus = ["Main", "Swift", "Java", "Go", "NonMenu"]
+    // below is the order and naming
+    var menus = ["Main", "Artists", "Swift", "Go", "NonMenu"]
     var mainViewController: UIViewController!
+    var artistsViewController: UIViewController!
     var swiftViewController: UIViewController!
-    var javaViewController: UIViewController!
     var goViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
@@ -41,8 +42,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let swiftViewController = storyboard.instantiateViewControllerWithIdentifier("SwiftViewController") as! SwiftViewController
         self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
 
-        let javaViewController = storyboard.instantiateViewControllerWithIdentifier("JavaViewController") as! JavaViewController
-        self.javaViewController = UINavigationController(rootViewController: javaViewController)
+        let artistsViewController = storyboard.instantiateViewControllerWithIdentifier("ArtistsViewController") as! ArtistsViewController
+        self.artistsViewController = UINavigationController(rootViewController: artistsViewController)
 
         let goViewController = storyboard.instantiateViewControllerWithIdentifier("GoViewController") as! GoViewController
         self.goViewController = UINavigationController(rootViewController: goViewController)
@@ -75,8 +76,8 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
         case .Swift:
             self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
-        case .Java:
-            self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
+        case .Artists:
+            self.slideMenuController()?.changeMainViewController(self.artistsViewController, close: true)
               print("doing transition")
             
             // need to keep reference here
@@ -97,7 +98,7 @@ extension LeftViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
-            case .Main, .Swift, .Java, .Go, .NonMenu:
+            case .Main, .Artists, .Swift, .Go, .NonMenu:
                 return BaseTableViewCell.height()
             }
         }
@@ -115,7 +116,7 @@ extension LeftViewController : UITableViewDataSource {
 
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
-            case .Main, .Swift, .Java, .Go, .NonMenu:
+            case .Main, .Artists, .Swift, .Go, .NonMenu:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 return cell

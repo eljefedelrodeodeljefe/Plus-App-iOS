@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="118" y="1437"/>
         </scene>
-        <!--Java View Controller-->
+        <!--Artists View Controller-->
         <scene sceneID="4cK-mI-MCG">
             <objects>
-                <viewController storyboardIdentifier="JavaViewController" id="TvI-C9-lSF" customClass="JavaViewController" customModule="plus_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArtistsViewController" id="TvI-C9-lSF" customClass="ArtistsViewController" customModule="plus_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qOh-Be-bJ9"/>
                         <viewControllerLayoutGuide type="bottom" id="yPA-d7-Ile"/>
@@ -162,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JavaViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNk-jI-vWu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ArtistsViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNk-jI-vWu">
                                 <rect key="frame" x="180" y="100" width="240" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="0CF-AY-wRd"/>
