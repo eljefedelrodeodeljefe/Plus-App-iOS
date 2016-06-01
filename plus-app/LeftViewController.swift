@@ -8,10 +8,10 @@ import EmitterKit
 
 enum LeftMenu: Int {
     case Main = 0
+    case Dashboard
     case Artists
-    case Swift
-    case Go
-    case NonMenu
+    case Settings
+//    case NonMenu
 }
 
 protocol LeftMenuProtocol : class {
@@ -22,12 +22,12 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     // below is the order and naming
-    var menus = ["Home", "Dashboard", "Artists", "Go", "NonMenu"]
+    var menus = ["Home", "Dashboard", "Artists", "Settings", "NonMenu"]
     var mainViewController: UIViewController!
     var artistsViewController: UIViewController!
-    var swiftViewController: UIViewController!
-    var goViewController: UIViewController!
-    var nonMenuViewController: UIViewController!
+    var dashboardViewController: UIViewController!
+    var settingsViewController: UIViewController!
+//    var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
 
     required init?(coder aDecoder: NSCoder) {
@@ -39,18 +39,18 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.tableView.separatorColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let swiftViewController = storyboard.instantiateViewControllerWithIdentifier("SwiftViewController") as! SwiftViewController
-        self.swiftViewController = UINavigationController(rootViewController: swiftViewController)
+        let dashboardViewController = storyboard.instantiateViewControllerWithIdentifier("DashboardViewController") as! DashboardViewController
+        self.dashboardViewController = UINavigationController(rootViewController: dashboardViewController)
 
         let artistsViewController = storyboard.instantiateViewControllerWithIdentifier("ArtistsViewController") as! ArtistsViewController
         self.artistsViewController = UINavigationController(rootViewController: artistsViewController)
 
-        let goViewController = storyboard.instantiateViewControllerWithIdentifier("GoViewController") as! GoViewController
-        self.goViewController = UINavigationController(rootViewController: goViewController)
+        let settingsViewController = storyboard.instantiateViewControllerWithIdentifier("SettingsViewController") as! SettingsViewController
+        self.settingsViewController = UINavigationController(rootViewController: settingsViewController)
 
-        let nonMenuController = storyboard.instantiateViewControllerWithIdentifier("NonMenuController") as! NonMenuController
-        nonMenuController.delegate = self
-        self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
+//        let nonMenuController = storyboard.instantiateViewControllerWithIdentifier("NonMenuController") as! NonMenuController
+//        nonMenuController.delegate = self
+//        self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
 
         self.tableView.registerCellClass(BaseTableViewCell.self)
 
@@ -67,28 +67,26 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         self.imageHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 160)
         self.view.layoutIfNeeded()
     }
-    
+
     var listener: Listener!
 
     func changeViewController(menu: LeftMenu) {
         switch menu {
         case .Main:
             self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
-        case .Swift:
-            self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
+            EventEmitter.shared.menu.emit("home")
+        case .Dashboard:
+            self.slideMenuController()?.changeMainViewController(self.dashboardViewController, close: true)
+            EventEmitter.shared.menu.emit("dashboard")
         case .Artists:
             self.slideMenuController()?.changeMainViewController(self.artistsViewController, close: true)
-            
-            // need to keep reference here
-            EventEmitter.shared.listener = EventEmitter.shared.menu.on { msg in print("\(msg)")}
-            
-            EventEmitter.shared.menu.emit("hello")
-            EventEmitter.shared.menu.emit("hello2")
+            EventEmitter.shared.menu.emit("artists")
             self.slideMenuController()?.closeLeft()
-        case .Go:
-            self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
-        case .NonMenu:
-            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+        case .Settings:
+            EventEmitter.shared.menu.emit("settings")
+            self.slideMenuController()?.changeMainViewController(self.settingsViewController, close: true)
+//        case .NonMenu:
+//            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
         }
     }
 }
@@ -97,7 +95,7 @@ extension LeftViewController : UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
-            case .Main, .Artists, .Swift, .Go, .NonMenu:
+            case .Main, .Dashboard, .Artists, .Settings/*, .NonMenu*/:
                 return BaseTableViewCell.height()
             }
         }
@@ -115,7 +113,7 @@ extension LeftViewController : UITableViewDataSource {
 
         if let menu = LeftMenu(rawValue: indexPath.item) {
             switch menu {
-            case .Main, .Artists, .Swift, .Go, .NonMenu:
+            case .Main, .Dashboard, .Artists, .Settings/*, .NonMenu*/:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 cell.textLabel!.font = UIFont(name:"Avenir", size:22)

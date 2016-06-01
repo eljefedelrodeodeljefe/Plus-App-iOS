@@ -14,6 +14,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerCellNib(DataTableViewCell.self)
+        
+        // need to keep reference here
+        EventEmitter.shared.listener = EventEmitter.shared.menu.on { msg in print("\(msg)")}
     }
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

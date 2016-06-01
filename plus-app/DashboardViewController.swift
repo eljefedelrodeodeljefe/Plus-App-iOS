@@ -1,5 +1,5 @@
 //
-//  SwiftViewController.swift
+//  DashboardViewController.swift
 //  SlideMenuControllerSwift
 //
 
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SwiftViewController: UIViewController {
+class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

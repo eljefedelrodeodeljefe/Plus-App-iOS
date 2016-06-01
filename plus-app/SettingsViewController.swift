@@ -1,11 +1,11 @@
 //
-//  GoViewController.swift
+//  SettingsViewController.swift
 //  SlideMenuControllerSwift
 //
 
 import UIKit
 
-class GoViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
