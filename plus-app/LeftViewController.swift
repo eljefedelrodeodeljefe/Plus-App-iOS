@@ -22,7 +22,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     // below is the order and naming
-    var menus = ["Main", "Artists", "Swift", "Go", "NonMenu"]
+    var menus = ["Home", "Dashboard", "Artists", "Go", "NonMenu"]
     var mainViewController: UIViewController!
     var artistsViewController: UIViewController!
     var swiftViewController: UIViewController!
@@ -78,7 +78,6 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
         case .Artists:
             self.slideMenuController()?.changeMainViewController(self.artistsViewController, close: true)
-              print("doing transition")
             
             // need to keep reference here
             EventEmitter.shared.listener = EventEmitter.shared.menu.on { msg in print("\(msg)")}
@@ -119,6 +118,7 @@ extension LeftViewController : UITableViewDataSource {
             case .Main, .Artists, .Swift, .Go, .NonMenu:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
+                cell.textLabel!.font = UIFont(name:"Avenir", size:22)
                 return cell
             }
         }
