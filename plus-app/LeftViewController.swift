@@ -76,17 +76,14 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
             EventEmitter.shared.menu.emit("home")
         case .Dashboard:
-            self.slideMenuController()?.changeMainViewController(self.dashboardViewController, close: true)
             EventEmitter.shared.menu.emit("dashboard")
+            self.slideMenuController()?.closeLeft()
         case .Artists:
-            self.slideMenuController()?.changeMainViewController(self.artistsViewController, close: true)
             EventEmitter.shared.menu.emit("artists")
             self.slideMenuController()?.closeLeft()
         case .Settings:
             EventEmitter.shared.menu.emit("settings")
-            self.slideMenuController()?.changeMainViewController(self.settingsViewController, close: true)
-//        case .NonMenu:
-//            self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
+            self.slideMenuController()?.closeLeft()
         }
     }
 }
