@@ -115,7 +115,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Swift View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="qDe-KX-ho1">
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" id="I9w-x4-mAi" customClass="DashboardViewController" customModule="plus_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="130" y="789"/>
         </scene>
-        <!--Go View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="adq-KJ-u5Z">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="pwN-Wv-Ioh" customClass="SettingsViewController" customModule="plus_app" customModuleProvider="target" sceneMemberID="viewController">
