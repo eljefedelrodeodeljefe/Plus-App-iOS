@@ -8,11 +8,6 @@ import WebKit
 import EmitterKit
 
 
-extension WKWebView {
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return nil
-    }
-}
 
 class ArtistsViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView?

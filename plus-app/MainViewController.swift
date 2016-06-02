@@ -4,26 +4,25 @@
 //
 
 import UIKit
+import WebKit
+import EmitterKit
 
-class MainViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
-
-    var mainContens = ["data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10", "data11", "data12", "data13", "data14", "data15"]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.registerCellNib(DataTableViewCell.self)
-        
-        // need to keep reference here
-        EventEmitter.shared.listener = EventEmitter.shared.menu.on { msg in print("\(msg)")}
+extension WKWebView {
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return nil
     }
+}
+
+
+class MainViewController: UIViewController, WKNavigationDelegate {
+
 
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
     }
 
     override func viewWillAppear(animated: Bool) {
+        //        self.setScreeName("My Screen Name")
         super.viewWillAppear(animated)
         self.setNavigationBarItem()
     }
@@ -31,34 +30,69 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    var webView: WKWebView?
+    
+    
+    /* Start the network activity indicator when the web view is loading */
+    func webView(webView: WKWebView,
+                 didStartProvisionalNavigation navigation: WKNavigation){
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    /* Stop the network activity indicator when the loading finishes */
+    func webView(webView: WKWebView,
+                 didFinishNavigation navigation: WKNavigation){
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    }
+    
+    func webView(webView: WKWebView,
+                 decidePolicyForNavigationResponse navigationResponse: WKNavigationResponse,
+                                                   decisionHandler: ((WKNavigationResponsePolicy) -> Void)){
+        
+        print(navigationResponse.response.MIMEType)
+        
+        decisionHandler(.Allow)
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        EventEmitter.shared.listener = EventEmitter.shared.menu.on { msg in print("\(msg)")}
+        // this fixes the webiew being und the navigation
+        self.edgesForExtendedLayout = .None
+        
+        /* Create our preferences on how the web page should be loaded */
+        let preferences = WKPreferences()
+        preferences.javaScriptEnabled = true
+        
+        /* Create a configuration for our preferences */
+        let configuration = WKWebViewConfiguration()
+        configuration.preferences = preferences
+        
+        /* Now instantiate the web view */
+        webView = WKWebView(frame: view.frame, configuration: configuration)
+        
+        
+        if let theWebView = webView{
+            /* Load a web page into our web view */
+            let url = NSBundle.mainBundle().URLForResource("bundle", withExtension: "html")
+            let urlRequest = NSURLRequest(URL: url!)
+            
+            
+            theWebView.scrollView.bounces = false
+            theWebView.loadRequest(urlRequest)
+            theWebView.navigationDelegate = self
+            view.addSubview(theWebView)
+            
+            
+        }
+        
+    }
 
 }
 
-
-extension MainViewController : UITableViewDelegate {
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return DataTableViewCell.height()
-    }
-}
-
-extension MainViewController : UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.mainContens.count
-    }
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(DataTableViewCell.identifier) as! DataTableViewCell
-        let data = DataTableViewCellData(imageUrl: "dummy", text: mainContens[indexPath.row])
-        cell.setData(data)
-        return cell
-    }
-
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let storyboard = UIStoryboard(name: "SubContentsViewController", bundle: nil)
-        let subContentsVC = storyboard.instantiateViewControllerWithIdentifier("SubContentsViewController") as! SubContentsViewController
-        self.navigationController?.pushViewController(subContentsVC, animated: true)
-    }
-}
 
 extension MainViewController : SlideMenuControllerDelegate {
 
